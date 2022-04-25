@@ -31,9 +31,4 @@ jobs:
     - name: Build with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
-        arguments: build jacocoTestReport
-    - name: Upload to Codecov
-      uses: codecov/codecov-action@v2
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        verbose: true
+        arguments: build
