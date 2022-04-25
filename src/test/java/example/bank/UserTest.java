@@ -17,7 +17,7 @@ class UserTest {
         Mockito.when(bank.getBalance()).thenReturn(100);
         User account = new User(bank);
         boolean result = account.withdraw(200);
-        assertFalse(result);
+        assertTrue(result);
 
     }
 
