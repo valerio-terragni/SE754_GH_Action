@@ -1,12 +1,18 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
-group 'org.example'
+group 'nz.ac.auckland.se754'
 version '1.0-SNAPSHOT'
+
 
 repositories {
     mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
 }
 
 dependencies {
@@ -17,6 +23,11 @@ dependencies {
 
 }
 
-test {
-    useJUnitPlatform()
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
 }
+
+check.dependsOn jacocoTestReport
