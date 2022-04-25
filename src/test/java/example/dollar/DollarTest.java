@@ -6,9 +6,5 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DollarTest {
-    @Test
-    public void testDollar(){
-        Dollar mockedDollar = Mockito.mock(Dollar.class);
-        assertEquals(6, mockedDollar.getAmount());
-    }
+
 }
